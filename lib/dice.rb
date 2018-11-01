@@ -1,10 +1,10 @@
 
 class Dice
 
-  def roll
-
-    rand(1..6)
-
+  def roll(n = 1)
+    values = []
+    n.times { values << rand(1..6)}
+    values
   end
 
 
