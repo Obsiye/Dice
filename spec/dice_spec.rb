@@ -9,8 +9,8 @@ describe Dice do
     end
 
     it 'returns number between 1 and 6' do
-      expect(dice.roll).to be <= 6
-      expect(dice.roll).to be >= 1
+      expect(dice.roll.pop).to be <= 6
+      expect(dice.roll.pop).to be >= 1
     end
 
     it 'returns random number' do
@@ -19,5 +19,13 @@ describe Dice do
     end
   end
 
+  context 'User passes value into #roll' do
+
+    it 'can #roll any number of dice at the same time' do
+      expect(subject.roll(2).length).to eq 2
+      # expect(roll).to with(any_args)
+    end
+
+  end
 
 end
